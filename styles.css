@@ -75,3 +75,76 @@ a {
     text-decoration: none;
     transition: all .3s ease;
 }
+
+/* ============
+Typography
+==============*/
+
+h1,
+h2,
+h3,
+h4,
+.action-large,
+.action-small,
+.slider-text {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2,
+h3,
+.action-large {
+    line-height: 152%;
+}
+
+h2,
+.action-large {
+    letter-spacing: 16%;
+}
+
+h4,
+.action-small,
+.caption {
+    letter-spacing: 5%;
+}
+
+h1 {
+    font-size: 3.2rem;
+    line-height: 150%;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 148%;
+}
+
+.action-large {
+    font-size: 2.4rem;
+}
+
+.action-small {
+    font-size: 1.2rem;
+    line-height: 130%;
+}
+
+.caption {
+    font-family: "Allura", cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.slider-text {
+    font-size: 8rem;
+}
+
+.logo-text {
+    letter-spacing: 0.6px;
+}
