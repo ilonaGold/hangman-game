@@ -240,7 +240,7 @@ p {
 
 .hero {
     height: 52.4rem;
-    background-image: url('assets/images/bg-snow.png'), url('assets/images/bg-ball.png');
+    background-image: url('./assets/images/bg-snow.png'), url('./assets/images/bg-ball.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -4rem;
@@ -321,7 +321,7 @@ p {
     height: 488px;
     text-align: center;
     color: var(--white);
-    background-image: url('assets/images/bg-snow.png');
+    background-image: url('./assets/images/bg-snow.png');
     background-size: cover;
     position: relative;
     padding-top: 8.3rem;
@@ -463,7 +463,7 @@ p {
 
 /* CTA Section */
 .cta {
-    background-image: url('assets/images/bg-forest.png'), url('assets/images/bg-snow.png');
+    background-image: url('./assets/images/bg-forest.png'), url('./assets/images/bg-snow.png');
     background-size: 100% 100%;
     background-position: center 2rem;
     background-repeat: no-repeat;
