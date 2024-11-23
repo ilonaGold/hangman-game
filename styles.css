@@ -315,3 +315,65 @@ p {
     flex: 1;
     border-radius: var(--border-radius);
 }
+
+/* Slider Section */
+.slider-section {
+    height: 488px;
+    text-align: center;
+    color: var(--white);
+    background-image: url('assets/images/bg-snow.png');
+    background-size: cover;
+    position: relative;
+    padding-top: 8.3rem;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: -8.2rem;
+}
+
+.slider-caption {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.slider-subtitle {
+    letter-spacing: 2.8px;
+    font-size: 2.6rem;
+}
+
+.slider-text {
+    color: var(--white);
+}
+
+.slider-item {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--border-radius);
+}
+
+.slider-btn-container {
+    display: flex;
+    gap: 1.5rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 8rem;
+}
+
+.arrow {
+   border: 1px solid var(--white);
+   padding: 20px;
+   border-radius: var(--border-radius);
+}
+
+.arrow:hover {
+    background: var(--white);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.arrow:disabled {
+    opacity: 0.8;
+}
