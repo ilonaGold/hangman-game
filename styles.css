@@ -148,3 +148,30 @@ p {
 .logo-text {
     letter-spacing: 0.6px;
 }
+
+/* Header */
+
+.header-container {
+    background-color: var(--white);
+    height: 6.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.logo-container:hover {
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 24px;
+    width: 24px;
+}
