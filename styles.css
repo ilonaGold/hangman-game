@@ -76,6 +76,38 @@ a {
     transition: all .3s ease;
 }
 
+/* Buttons */
+
+button {
+    color: var(--white);
+    background: var(--dark);
+    padding: 2rem 3.7rem;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    letter-spacing: 0.55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--white);
+    color: var(--dark);
+}
+
+button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button a:hover {
+    color: inherit;
+}
+
 /* ============
 Typography
 ==============*/
