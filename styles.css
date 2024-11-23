@@ -460,3 +460,53 @@ p {
 .tab-details:hover {
     color: var(--primary);
 }
+
+/* CTA Section */
+.cta {
+    background-image: url('assets/images/bg-forest.png'), url('assets/images/bg-snow.png');
+    background-size: 100% 100%;
+    background-position: center 2rem;
+    background-repeat: no-repeat;
+    height: 69.5rem;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-text {
+    max-width: 25ch;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    margin-top: 17.5rem;
+}
+
+.btn-explore-gifts {
+    margin-top: 1.8rem;
+    margin-bottom: 1.6rem;
+}
+
+.cta .caption {
+    letter-spacing: 1.2px;
+}
+
+.countdown {
+    width: 350px;
+    margin: 0 auto;
+    background: var(--white40);
+    padding: 1rem 0.8rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown h4 {
+    font-size: 1.2rem;
+}
+
+.countdown-cell {
+    width: 80px;
+}
