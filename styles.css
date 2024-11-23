@@ -203,3 +203,40 @@ p {
     background: var(--primary10);
     cursor: pointer;
 }
+
+/* Hero Section */
+
+.hero {
+    height: 52.4rem;
+    background-image: url('assets/images/bg-snow.png'), url('assets/images/bg-ball.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -4rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 12rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.hero-text {
+    color: var(--white);
+    height: 14.4rem;
+    text-align: center;
+}
+
+.hero-text .caption {
+    letter-spacing: 5%;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    letter-spacing: 6px;
+    margin-bottom: 1.2rem;
+}
+
+.hero-text .caption-new-year {
+    margin-top: 1rem;
+}
