@@ -272,3 +272,46 @@ p {
 .hero-text .caption-new-year {
     margin-top: 1rem;
 }
+
+/* About Section */
+.about {
+    display: flex;
+    height: 62rem;
+    padding-top: 6rem;
+}
+
+.about-caption {
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.about-text {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 6.3rem;
+    margin-right: -1.6rem;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.about-text h2 {
+    width: 360px;
+    margin-top: 1.6rem;
+    letter-spacing: 3.7px;
+}
+
+.about-text p {
+    width: 426px;
+    margin-top: 2rem;
+}
+
+.about-img {
+    flex: 1;
+    border-radius: var(--border-radius);
+}
