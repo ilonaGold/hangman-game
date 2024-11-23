@@ -75,3 +75,438 @@ a {
     text-decoration: none;
     transition: all .3s ease;
 }
+
+/* Buttons */
+
+button {
+    color: var(--white);
+    background: var(--dark);
+    padding: 2rem 3.7rem;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    letter-spacing: 0.55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--white);
+    color: var(--dark);
+}
+
+button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button a:hover {
+    color: inherit;
+}
+
+/* ============
+Typography
+==============*/
+
+h1,
+h2,
+h3,
+h4,
+.action-large,
+.action-small,
+.slider-text {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2,
+h3,
+.action-large {
+    line-height: 152%;
+}
+
+h2,
+.action-large {
+    letter-spacing: 16%;
+}
+
+h4,
+.action-small,
+.caption {
+    letter-spacing: 5%;
+}
+
+h1 {
+    font-size: 3.2rem;
+    line-height: 150%;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 148%;
+}
+
+.action-large {
+    font-size: 2.4rem;
+}
+
+.action-small {
+    font-size: 1.2rem;
+    line-height: 130%;
+}
+
+.caption {
+    font-family: "Allura", cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.slider-text {
+    font-size: 8rem;
+}
+
+.logo-text {
+    letter-spacing: 0.6px;
+}
+
+/* Header */
+
+.header-container {
+    background-color: var(--white);
+    height: 6.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.logo-container:hover {
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 24px;
+    width: 24px;
+}
+
+/* Navbar */
+.menu-container {
+    display: flex;
+    align-items: center;
+    height: 6.4rem;
+}
+
+.menu-items {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 376px;
+    gap: 0.75rem;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+}
+
+.menu-item:hover {
+    color: var(--primary);
+    background: var(--primary10);
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 52.4rem;
+    background-image: url('assets/images/bg-snow.png'), url('assets/images/bg-ball.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -4rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 12rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.hero-text {
+    color: var(--white);
+    height: 14.4rem;
+    text-align: center;
+}
+
+.hero-text .caption {
+    letter-spacing: 5%;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    letter-spacing: 6px;
+    margin-bottom: 1.2rem;
+}
+
+.hero-text .caption-new-year {
+    margin-top: 1rem;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    height: 62rem;
+    padding-top: 6rem;
+}
+
+.about-caption {
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.about-text {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 6.3rem;
+    margin-right: -1.6rem;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.about-text h2 {
+    width: 360px;
+    margin-top: 1.6rem;
+    letter-spacing: 3.7px;
+}
+
+.about-text p {
+    width: 426px;
+    margin-top: 2rem;
+}
+
+.about-img {
+    flex: 1;
+    border-radius: var(--border-radius);
+}
+
+/* Slider Section */
+.slider-section {
+    height: 488px;
+    text-align: center;
+    color: var(--white);
+    background-image: url('assets/images/bg-snow.png');
+    background-size: cover;
+    position: relative;
+    padding-top: 8.3rem;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: -8.2rem;
+}
+
+.slider-caption {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.slider-subtitle {
+    letter-spacing: 2.8px;
+    font-size: 2.6rem;
+}
+
+.slider-text {
+    color: var(--white);
+}
+
+.slider-item {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--border-radius);
+}
+
+.slider-btn-container {
+    display: flex;
+    gap: 1.5rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 8rem;
+}
+
+.arrow {
+   border: 1px solid var(--white);
+   padding: 20px;
+   border-radius: var(--border-radius);
+}
+
+.arrow:hover {
+    background: var(--white);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.arrow:disabled {
+    opacity: 0.8;
+}
+
+/* Best Gifts Section */
+.best-gifts {
+    height: 55.4rem;
+    color: var(--white);
+    padding-top: 7.2rem;
+}
+
+.best-gifts-title {
+    text-align: center;
+    letter-spacing: 3.8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.best-gifts-title .caption {
+    letter-spacing: 1.1px;
+    margin-bottom: 1rem;
+}
+
+.best-gifts-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem;
+}
+
+.best-gifts-card {
+    background: var(--content-bg);
+    border-radius: var(--border-radius);
+    color: var(--dark);
+}
+
+.best-gifts-card:hover {
+    cursor: pointer;
+}
+
+.best-gifts-card-img {
+    width: 310px;
+    height: 230px;
+}
+
+.best-gifts-card-text {
+    background: var(--white);
+    height: 112px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.tab {
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: -0.5rem;
+}
+
+.tab-purple {
+    color: var(--purple)
+}
+
+.tab-green {
+    color: var(--green);
+}
+
+.tab-pink {
+    color: var(--pink);
+}
+
+.tab:hover {
+    background: var(--primary10);
+    cursor: pointer;
+}
+
+.tab-details {
+    margin-left: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.tab-details:hover {
+    color: var(--primary);
+}
+
+/* CTA Section */
+.cta {
+    background-image: url('assets/images/bg-forest.png'), url('assets/images/bg-snow.png');
+    background-size: 100% 100%;
+    background-position: center 2rem;
+    background-repeat: no-repeat;
+    height: 69.5rem;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-text {
+    max-width: 25ch;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    margin-top: 17.5rem;
+}
+
+.btn-explore-gifts {
+    margin-top: 1.8rem;
+    margin-bottom: 1.6rem;
+}
+
+.cta .caption {
+    letter-spacing: 1.2px;
+}
+
+.countdown {
+    width: 350px;
+    margin: 0 auto;
+    background: var(--white40);
+    padding: 1rem 0.8rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown h4 {
+    font-size: 1.2rem;
+}
+
+.countdown-cell {
+    width: 80px;
+}
