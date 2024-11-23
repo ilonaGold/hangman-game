@@ -377,3 +377,86 @@ p {
 .arrow:disabled {
     opacity: 0.8;
 }
+
+/* Best Gifts Section */
+.best-gifts {
+    height: 55.4rem;
+    color: var(--white);
+    padding-top: 7.2rem;
+}
+
+.best-gifts-title {
+    text-align: center;
+    letter-spacing: 3.8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.best-gifts-title .caption {
+    letter-spacing: 1.1px;
+    margin-bottom: 1rem;
+}
+
+.best-gifts-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem;
+}
+
+.best-gifts-card {
+    background: var(--content-bg);
+    border-radius: var(--border-radius);
+    color: var(--dark);
+}
+
+.best-gifts-card:hover {
+    cursor: pointer;
+}
+
+.best-gifts-card-img {
+    width: 310px;
+    height: 230px;
+}
+
+.best-gifts-card-text {
+    background: var(--white);
+    height: 112px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.tab {
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: -0.5rem;
+}
+
+.tab-purple {
+    color: var(--purple)
+}
+
+.tab-green {
+    color: var(--green);
+}
+
+.tab-pink {
+    color: var(--pink);
+}
+
+.tab:hover {
+    background: var(--primary10);
+    cursor: pointer;
+}
+
+.tab-details {
+    margin-left: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.tab-details:hover {
+    color: var(--primary);
+}
