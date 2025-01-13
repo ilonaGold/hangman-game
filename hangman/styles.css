@@ -1,0 +1,101 @@
+/* Add a custom font */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-primary: #664d37;
+  --color-secondary: #fafad2;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark-gray: #3a3a3a;
+  --color-light-gray: #f4f4f4;
+  --shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Nova Square", sans-serif;
+  font-size: 1.5rem;
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add a bg image */
+  background: var(--color-primary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-dark-gray);
+}
+
+/* Game container */
+
+#hangman-container {
+  max-width: 700px;
+  text-align: center;
+  padding: 1rem 1rem 4rem;
+  border-radius: 10px;
+  background: var(--color-light-gray);
+}
+
+h1 {
+  font-size: 4.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  text-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+#gallows-canvas {
+  display: block;
+  margin: 1rem auto;
+  background: var(--color-white);
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 10px;
+}
+
+#quiz-section {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#secret-word {
+  font-family: "Geo-Regular", sans-serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+#virtual-keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+}
+
+.key {
+  flex: 0 0 calc(100% / 9 - 5px); /* Each key takes up 1/9th of the row minus the gap */
+  font-size: 1.2rem;
+  text-align: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.8rem;
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
