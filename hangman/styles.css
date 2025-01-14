@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Geo-Regular";
-  src: url("/assets/fonts/Geo-Regular.ttf") format("truetype");
+  src: url("assets/fonts/Geo-Regular.ttf") format("truetype");
 }
 
 * {
@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--color-primary) url("/assets/images/rope-bg.jpg");
+  background: var(--color-primary) url("assets/images/rope-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-dark-gray);
