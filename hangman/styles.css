@@ -1,4 +1,7 @@
-/* Add a custom font */
+@font-face {
+  font-family: "Geo-Regular";
+  src: url("/assets/fonts/Geo-Regular.ttf") format("truetype");
+}
 
 * {
   margin: 0;
@@ -30,8 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Add a bg image */
-  background: var(--color-primary);
+  background: var(--color-primary) url("/assets/images/rope-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-dark-gray);
@@ -48,7 +50,9 @@ body {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-family: "Geo-Regular", sans-serif;
+  font-size: 5.8rem;
+  letter-spacing: 0.2rem;
   color: var(--color-primary);
   text-align: center;
   text-shadow: var(--shadow);
@@ -70,7 +74,7 @@ h1 {
 
 #secret-word {
   font-family: "Geo-Regular", sans-serif;
-  font-size: 2.2rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
   text-align: center;
