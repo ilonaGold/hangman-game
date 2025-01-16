@@ -30,12 +30,13 @@ body {
   font-size: 1.5rem;
   width: 100%;
   height: 100vh;
+  padding: 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--color-primary) url("assets/images/rope-bg.jpg");
+  background: var(--color-primary) url("assets/images/rope-bg.jpg") no-repeat
+    center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
   color: var(--color-dark-gray);
 }
 
@@ -54,11 +55,13 @@ body::before {
 /* Game container */
 
 #hangman-container {
+  margin: auto;
   max-width: 700px;
   text-align: center;
-  padding: 1rem 2rem 3rem;
+  padding: 1rem 2rem 3.25rem;
   border-radius: var(--border-radius);
   background: var(--color-light-gray);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -73,7 +76,7 @@ h1 {
 
 #gallows-canvas {
   display: block;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   background: var(--color-white);
   border-radius: var(--border-radius);
   box-shadow: 0 2px 8px var(--color-primary);
