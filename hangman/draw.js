@@ -18,3 +18,74 @@ function drawGallows() {
   // Short vertical line
   ctx.fillRect(140, 20, 10, 50);
 }
+
+// Function to draw the head
+function drawHead() {
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Draw head
+  ctx.beginPath();
+  ctx.arc(145, 85, 15, 0, Math.PI * 2);
+  ctx.stroke();
+}
+
+// Function to draw the body
+function drawBody() {
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Draw body
+  ctx.beginPath();
+  ctx.moveTo(145, 100);
+  ctx.lineTo(145, 180);
+  ctx.stroke();
+}
+
+// Function to draw the left arm
+function drawLeftArm() {
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Draw left arm
+  ctx.beginPath();
+  ctx.moveTo(145, 120);
+  ctx.lineTo(120, 140);
+  ctx.stroke();
+}
+
+// Function to draw the right arm
+function drawRightArm() {
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Draw right arm
+  ctx.beginPath();
+  ctx.moveTo(145, 120);
+  ctx.lineTo(170, 140);
+  ctx.stroke();
+}
+
+// Function to draw the left leg
+function drawLeftLeg() {
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Draw left leg
+  ctx.beginPath();
+  ctx.moveTo(145, 180);
+  ctx.lineTo(130, 220);
+  ctx.stroke();
+}
+
+// Function to draw the right leg
+function drawRightLeg() {
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Draw right leg
+  ctx.beginPath();
+  ctx.moveTo(145, 180);
+  ctx.lineTo(160, 220);
+  ctx.stroke();
+}
