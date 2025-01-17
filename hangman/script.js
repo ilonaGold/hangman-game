@@ -26,28 +26,8 @@ gallowsCanvas.height = 300;
 gallows.appendChild(gallowsCanvas);
 container.appendChild(gallows);
 
-// Function to draw the gallows
-function drawGallows() {
-  const canvas = document.getElementById("gallows-canvas");
-  const ctx = canvas.getContext("2d");
-
-  // Color
-  ctx.fillStyle = "000";
-
-  // Base
-  ctx.fillRect(20, 280, 160, 10);
-
-  // Vertical post
-  ctx.fillRect(50, 20, 10, 260);
-
-  // Horizontal beam
-  ctx.fillRect(50, 20, 100, 10);
-
-  // Short vertical line
-  ctx.fillRect(140, 20, 10, 50);
-}
-
-drawGallows(); // Function to draw the gallows
+// Call the function to draw the gallows
+drawGallows();
 
 // Step 5: Create the quiz section
 const quizSection = document.createElement("div");
