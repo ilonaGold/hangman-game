@@ -89,3 +89,28 @@ function drawRightLeg() {
   ctx.lineTo(160, 220);
   ctx.stroke();
 }
+
+// Function to draw the next part of the hangman
+function drawHangmanPart() {
+  const incorrectGuessesCount = guessedLetters.size - getCorrectGuessesCount();
+  switch (incorrectGuessesCount) {
+    case 1:
+      drawHead();
+      break;
+    case 2:
+      drawBody();
+      break;
+    case 3:
+      drawLeftArm();
+      break;
+    case 4:
+      drawRightArm();
+      break;
+    case 5:
+      drawLeftLeg();
+      break;
+    case 6:
+      drawRightLeg();
+      break;
+  }
+}
