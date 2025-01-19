@@ -62,18 +62,22 @@ alphabet.split("").forEach((letter) => {
 container.appendChild(keyboard);
 
 // Step 11: Load question-answer pairs to initialize the game
-fetch("questions.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const randomPair = data[Math.floor(Math.random() * data.length)];
-    hint.textContent = `Hint: ${randomPair.question}`;
-    currentAnswer = randomPair.answer.toUpperCase();
-    secretWordDisplay.textContent = "_ ".repeat(currentAnswer.length).trim();
-    console.log(`The secret word is: ${currentAnswer}`); // Log the secret word for cross-checking
+function fetchQuestionAnswer() {
+  fetch("questions.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const randomPair = data[Math.floor(Math.random() * data.length)];
+      hint.textContent = `Hint: ${randomPair.question}`;
+      currentAnswer = randomPair.answer.toUpperCase();
+      secretWordDisplay.textContent = "_ ".repeat(currentAnswer.length).trim();
+      console.log(`The secret word is: ${currentAnswer}`); // Log the secret word for cross-checking
 
-    // Step 12: Draw the gallows
-    drawGallows();
-  })
-  .catch((error) =>
-    console.error("Error loading question-answer pairs:", error)
-  );
+      // Step 12: Draw the gallows
+      drawGallows();
+    })
+    .catch((error) =>
+      console.error("Error loading question-answer pairs:", error)
+    );
+}
+
+fetchQuestionAnswer();
