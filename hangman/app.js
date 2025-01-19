@@ -1,4 +1,30 @@
-// Step 7: Load question-answer pairs to initialize the game
+// INITIALIZATION FUNCTIONS
+function fetchQuestionAnswer() {}
+function resetGame() {}
+function restartGame() {}
+
+// GAME STATE UPDATE FUNCTIONS
+function updateIncorrectGuesses() {}
+function updateSecretWordDisplay() {}
+function updateGameState() {}
+
+// GAME LOGIC FUNCTIONS
+function handleGuess() {}
+function isGameWon() {}
+function isGameLost() {}
+
+// EVENT LISTENER FUNCTIONS
+// document.querySelectorAll(".key").forEach(...);
+// document.addEventListener("keydown", ...);
+
+// UTILITY FUNCTIONS
+function getCorrectGuessesCount() {}
+
+// INITIALIZE THE GAME
+fetchQuestionAnswer();
+drawGallows();
+
+// Load question-answer pairs to initialize the game
 let currentAnswer = "";
 fetch("questions.json")
   .then((response) => response.json())
