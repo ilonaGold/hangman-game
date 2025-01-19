@@ -62,7 +62,6 @@ alphabet.split("").forEach((letter) => {
 container.appendChild(keyboard);
 
 // Step 11: Load question-answer pairs to initialize the game
-
 fetch("questions.json")
   .then((response) => response.json())
   .then((data) => {
@@ -71,12 +70,10 @@ fetch("questions.json")
     currentAnswer = randomPair.answer.toUpperCase();
     secretWordDisplay.textContent = "_ ".repeat(currentAnswer.length).trim();
     console.log(`The secret word is: ${currentAnswer}`); // Log the secret word for cross-checking
+
+    // Step 12: Draw the gallows
+    drawGallows();
   })
   .catch((error) =>
     console.error("Error loading question-answer pairs:", error)
   );
-
-drawGallows();
-
-// Step 12: Draw the gallows
-drawGallows();
