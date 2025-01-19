@@ -130,3 +130,93 @@ h1 {
   color: #666;
   cursor: not-allowed;
 }
+
+/* Modal Window */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1.5rem 1rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.modal-content {
+  max-width: 340px;
+  min-height: 67%;
+  background: linear-gradient(180deg, #fcec4b, var(--color-secondary));
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3.75rem;
+  padding: 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: default;
+}
+
+.modal-content .trophy {
+  width: 100px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.modal-content p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p strong {
+  font-family: "Geo-Regular", sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.modal-content button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  color: #fcec4b;
+  background: #b35c2b;
+  transform: scale(1.05);
+}
+
+.modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#play-again-btn {
+  margin-top: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
