@@ -92,7 +92,6 @@ function drawRightLeg() {
 
 // Function to draw the next part of the hangman
 function drawHangmanPart() {
-  const incorrectGuessesCount = guessedLetters.size - getCorrectGuessesCount();
   switch (incorrectGuessesCount) {
     case 1:
       drawHead();
