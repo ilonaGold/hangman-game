@@ -43,7 +43,7 @@ secretWordDisplay.textContent = "banana"; // Placeholder for secret word
 quizSection.appendChild(secretWordDisplay);
 
 // Add incorrect guesses counter
-const incorrectGuesses = document.createElement("p");
+let incorrectGuesses = document.createElement("p");
 incorrectGuesses.id = "incorrect-guesses";
 incorrectGuesses.textContent = "Incorrect guesses: 0 / 6";
 quizSection.appendChild(incorrectGuesses);
