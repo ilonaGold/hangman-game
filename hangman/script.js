@@ -3,7 +3,7 @@
 // Step 1: Create the main container for the Hangman game
 const container = document.createElement("div");
 container.id = "hangman-container";
-body.appendChild(container);
+document.body.appendChild(container);
 
 // Step 2: Add a title to the game
 const title = document.createElement("h1");
