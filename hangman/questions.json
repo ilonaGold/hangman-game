@@ -1,42 +1,42 @@
 [
   {
-    "question": "A device used to transmit sound over long distances.",
-    "answer": "telephone"
+    "question": "The language primarily used to style web pages",
+    "answer": "CSS"
   },
   {
-    "question": "The tallest land animal.",
-    "answer": "giraffe"
+    "question": "A widely used JavaScript library for building user interfaces",
+    "answer": "React"
   },
   {
-    "question": "A precious metal with the symbol 'Au'.",
-    "answer": "gold"
+    "question": "The protocol that allows secure communication over the web",
+    "answer": "HTTPS"
   },
   {
-    "question": "The fastest land animal.",
-    "answer": "cheetah"
+    "question": "The JavaScript function to delay execution of code",
+    "answer": "setTimeout"
   },
   {
-    "question": "A flying mammal.",
-    "answer": "bat"
+    "question": "An HTML element used to create a clickable link",
+    "answer": "Anchor"
   },
   {
-    "question": "A fruit that's yellow and curved.",
-    "answer": "banana"
+    "question": "A JavaScript method used to add or remove classes from an element",
+    "answer": "classList"
   },
   {
-    "question": "The main ingredient in sushi.",
-    "answer": "rice"
+    "question": "The term for the parent language of JavaScript",
+    "answer": "ECMAScript"
   },
   {
-    "question": "A famous painting by Leonardo da Vinci.",
-    "answer": "monalisa"
+    "question": "The CSS property used to control the space between elements",
+    "answer": "Margin"
   },
   {
-    "question": "A large body of saltwater.",
-    "answer": "ocean"
+    "question": "A browser API for storing data locally on the client side",
+    "answer": "LocalStorage"
   },
   {
-    "question": "An animal known for building dams.",
-    "answer": "beaver"
+    "question": "The default HTTP method for form submissions",
+    "answer": "POST"
   }
 ]
