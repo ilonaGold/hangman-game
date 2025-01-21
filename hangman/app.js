@@ -40,6 +40,7 @@ function handleGuess(letter, button) {
 
   guessedLetters.add(letter);
 
+  // Disable the button if it wasn't passed
   const targetButton =
     button || document.querySelector(`[data-letter="${letter}"]`);
   if (targetButton) {
@@ -89,9 +90,12 @@ function isGameLost() {
 }
 
 // Game end handling
+
 function endGame(statusMessage) {
   setTimeout(() => {
+    // Add a small delay to ensure all updates are complete
     showModal(`YOU ${statusMessage}!`, "The secret word was:", currentAnswer);
+    // Disable all keyboard buttons
     document.querySelectorAll(".key").forEach((button) => {
       button.disabled = true;
       button.style.opacity = "0.5";
