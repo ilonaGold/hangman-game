@@ -133,3 +133,10 @@ function restartGame() {
   resetGame();
   fetchQuestionAnswer();
 }
+
+// Initialize game
+document.addEventListener("DOMContentLoaded", () => {
+  drawGallows();
+  fetchQuestionAnswer();
+  setupKeyboardListeners();
+});
