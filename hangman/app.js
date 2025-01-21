@@ -15,3 +15,21 @@ function fetchQuestionAnswer() {
     })
     .catch((error) => console.error("Error loading questions:", error));
 }
+
+// Update functions
+function updateIncorrectGuesses() {
+  incorrectGuesses.textContent = `Incorrect guesses: ${incorrectGuessesCount} / 6`;
+  incorrectGuesses.style.color = "red";
+}
+
+function getCorrectGuessesCount() {
+  return currentAnswer.split("").filter((letter) => guessedLetters.has(letter))
+    .length;
+}
+
+function updateSecretWordDisplay() {
+  secretWordDisplay.textContent = currentAnswer
+    .split("")
+    .map((letter) => (guessedLetters.has(letter) ? letter : "_"))
+    .join(" ");
+}
