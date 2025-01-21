@@ -78,3 +78,58 @@ function setupKeyboardListeners() {
     }
   });
 }
+
+// Game state checks
+function isGameWon() {
+  return getCorrectGuessesCount() === currentAnswer.length;
+}
+
+function isGameLost() {
+  return incorrectGuessesCount >= 6;
+}
+
+// Game end handling
+function endGame(statusMessage) {
+  setTimeout(() => {
+    showModal(`YOU ${statusMessage}!`, "The secret word was:", currentAnswer);
+    document.querySelectorAll(".key").forEach((button) => {
+      button.disabled = true;
+      button.style.opacity = "0.5";
+    });
+  }, 500);
+}
+
+function updateGameState() {
+  if (isGameWon()) {
+    endGame("WON");
+  } else if (isGameLost()) {
+    endGame("LOST");
+  }
+}
+
+// Reset game
+function resetGame() {
+  guessedLetters.clear();
+  incorrectGuessesCount = 0;
+  updateIncorrectGuesses();
+
+  const canvas = document.getElementById("gallows-canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawGallows();
+
+  document.querySelectorAll(".key").forEach((button) => {
+    button.disabled = false;
+    button.style.opacity = "1";
+  });
+
+  incorrectGuesses.style.color = "#3a3a3a";
+
+  const modal = document.querySelector(".modal");
+  if (modal) modal.remove();
+}
+
+function restartGame() {
+  resetGame();
+  fetchQuestionAnswer();
+}
