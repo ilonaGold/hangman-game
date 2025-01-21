@@ -33,3 +33,48 @@ function updateSecretWordDisplay() {
     .map((letter) => (guessedLetters.has(letter) ? letter : "_"))
     .join(" ");
 }
+
+// Handle guess logic
+function handleGuess(letter, button) {
+  if (guessedLetters.has(letter)) return;
+
+  guessedLetters.add(letter);
+
+  const targetButton =
+    button || document.querySelector(`[data-letter="${letter}"]`);
+  if (targetButton) {
+    targetButton.disabled = true;
+    targetButton.style.opacity = "0.5";
+  }
+
+  if (currentAnswer.includes(letter)) {
+    updateSecretWordDisplay();
+  } else {
+    incorrectGuessesCount++;
+    updateIncorrectGuesses();
+    drawHangmanPart();
+  }
+
+  updateGameState();
+}
+
+// Set up keyboard listeners
+function setupKeyboardListeners() {
+  // Virtual keyboard
+  document.querySelectorAll(".key").forEach((button) => {
+    button.addEventListener("click", () =>
+      handleGuess(button.textContent, button)
+    );
+  });
+
+  // Physical keyboard
+  document.addEventListener("keydown", (event) => {
+    const letter = event.key.toUpperCase();
+    if (alphabet.includes(letter)) {
+      const button = document.querySelector(`.key[data-letter="${letter}"]`);
+      if (button && !button.disabled) {
+        handleGuess(letter, button);
+      }
+    }
+  });
+}
