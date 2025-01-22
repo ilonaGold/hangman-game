@@ -30,7 +30,7 @@ body {
   font-size: 1.5rem;
   width: 100%;
   height: 100vh;
-  padding: 5rem 0;
+  /* padding: 5rem 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +150,7 @@ h1 {
 
 .modal-content {
   max-width: 340px;
-  min-height: 67%;
+  min-height: 62%;
   background: linear-gradient(180deg, #fcec4b, var(--color-secondary));
   width: 50%;
   display: flex;
@@ -158,8 +158,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 3.75rem;
-  padding: 2rem;
+  padding: 4rem 1rem 3rem;
   font-size: 1.1rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -219,4 +218,72 @@ h1 {
 #play-again-btn {
   margin-top: 1rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  #secret-word {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
+  .modal-content {
+    min-height: 75%;
+  }
+  #play-again-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4.2rem;
+    line-height: 1.2;
+  }
+  #virtual-keyboard {
+    width: 95%;
+  }
+  .key {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+  #gallows-canvas {
+    width: 160px;
+    height: 240px;
+  }
+  #quiz-section {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+  #secret-word {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  #virtual-keyboard {
+    width: 100%;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  #quiz-section {
+    font-size: 1.2rem;
+  }
+  #secret-word {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
 }
