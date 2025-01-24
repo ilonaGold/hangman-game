@@ -36,7 +36,13 @@ function updateSecretWordDisplay() {
 
 // Handle guess logic
 function handleGuess(letter, button) {
-  if (guessedLetters.has(letter)) return;
+  // Prevent input if the game has ended
+  if (isGameWon() || isGameLost()) {
+    console.log("Game has already ended, ignoring input.");
+    return;
+  }
+
+  if (guessedLetters.has(letter)) return; // Prevent duplicate guesses
 
   guessedLetters.add(letter);
 
@@ -69,7 +75,16 @@ function setupKeyboardListeners() {
   });
 
   // Physical keyboard
+  let keyPressLock = false;
+
   document.addEventListener("keydown", (event) => {
+    if (keyPressLock) return; // Ignore if locked
+    keyPressLock = true;
+
+    setTimeout(() => {
+      keyPressLock = false; // Unlock after delay
+    }, 100); // 100ms debounce delay
+
     const letter = event.key.toUpperCase();
     if (alphabet.includes(letter)) {
       const button = document.querySelector(`.key[data-letter="${letter}"]`);
