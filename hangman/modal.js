@@ -1,5 +1,11 @@
 // Function to show a modal window
 function showModal(status, label, word) {
+  // Check if a modal already exists and remove it
+  const existingModal = document.querySelector(".modal");
+  if (existingModal) {
+    existingModal.remove();
+  }
+
   const modal = document.createElement("div");
   modal.classList.add("modal");
 
