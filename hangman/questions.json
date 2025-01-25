@@ -38,5 +38,45 @@
   {
     "question": "The default HTTP method for form submissions",
     "answer": "POST"
+  },
+  {
+    "question": "A language used to structure content on the web",
+    "answer": "HTML"
+  },
+  {
+    "question": "The process of finding and fixing bugs in code",
+    "answer": "Debugging"
+  },
+  {
+    "question": "A method in JavaScript to filter an array",
+    "answer": "Filter"
+  },
+  {
+    "question": "The tag used to define a table row in HTML",
+    "answer": "TableRow"
+  },
+  {
+    "question": "A type of loop that repeats until a condition is false",
+    "answer": "While"
+  },
+  {
+    "question": "The property in CSS used to set the background color",
+    "answer": "BackgroundColor"
+  },
+  {
+    "question": "The JavaScript keyword used to declare a constant variable",
+    "answer": "Const"
+  },
+  {
+    "question": "A feature in JavaScript to make asynchronous requests",
+    "answer": "Fetch"
+  },
+  {
+    "question": "The HTML element used to embed images",
+    "answer": "Image"
+  },
+  {
+    "question": "The JavaScript method used to parse JSON strings",
+    "answer": "Parse"
   }
 ]
