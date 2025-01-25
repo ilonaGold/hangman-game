@@ -2,14 +2,20 @@
 const guessedLetters = new Set();
 const usedAnswers = new Set();
 let incorrectGuessesCount = 0;
+let isFetching = false; // Global flag to prevent multiple fetches
 
 // Function to fetch question-answer pairs
 function fetchQuestionAnswer() {
+  if (isFetching) return; // Prevent multiple fetches
+  isFetching = true;
+
   fetch("questions.json")
     .then((response) => response.json())
     .then((data) => {
+      // Reset usedAnswers if all words have been used
       if (usedAnswers.size === data.length) {
-        usedAnswers.clear(); // Reset when all words are used
+        console.log("All words used. Resetting usedAnswers set.");
+        usedAnswers.clear();
       }
 
       let randomPair;
@@ -17,12 +23,21 @@ function fetchQuestionAnswer() {
         randomPair = data[Math.floor(Math.random() * data.length)];
       } while (usedAnswers.has(randomPair.answer.toUpperCase()));
 
+      // Add the new word to usedAnswers
       hint.textContent = `Hint: ${randomPair.question}`;
       currentAnswer = randomPair.answer.toUpperCase();
+      usedAnswers.add(currentAnswer); // Add current word to the set
       secretWordDisplay.textContent = "_ ".repeat(currentAnswer.length).trim();
+
       console.log(`The secret word is: ${currentAnswer}`);
+      console.log("Used answers set:", [...usedAnswers]);
     })
-    .catch((error) => console.error("Error loading questions:", error));
+    .catch((error) =>
+      console.error("Error loading question-answer pairs:", error)
+    )
+    .finally(() => {
+      isFetching = false; // Unlock fetch
+    });
 }
 
 // Update functions
@@ -51,18 +66,28 @@ function handleGuess(letter, button) {
     return;
   }
 
-  if (guessedLetters.has(letter)) return; // Prevent duplicate guesses
-
-  guessedLetters.add(letter);
-
-  // Disable the button if it wasn't passed
-  const targetButton =
-    button || document.querySelector(`[data-letter="${letter}"]`);
-  if (targetButton) {
-    targetButton.disabled = true;
-    targetButton.style.opacity = "0.5";
+  // Prevent input during a fetch operation
+  if (isFetching) {
+    console.log("Fetching in progress, ignoring input.");
+    return;
   }
 
+  // Prevent duplicate guesses
+  if (guessedLetters.has(letter)) return; // Prevent duplicate guesses
+
+  // Add the guessed letter to the set
+  guessedLetters.add(letter);
+
+  // Disable the button (virtual or dynamically found)
+  if (!button) {
+    button = document.querySelector(`[data-letter="${letter}"]`);
+  }
+  if (button) {
+    button.disabled = true;
+    button.style.opacity = "0.5";
+  }
+
+  // Check if the guess is correct or incorrect
   if (currentAnswer.includes(letter)) {
     updateSecretWordDisplay();
   } else {
@@ -71,6 +96,7 @@ function handleGuess(letter, button) {
     drawHangmanPart();
   }
 
+  // Update the game state
   updateGameState();
 }
 
