@@ -135,6 +135,13 @@ h1 {
   cursor: not-allowed;
 }
 
+.key:focus {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 /* Modal Window */
 
 .modal {
