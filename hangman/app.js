@@ -14,7 +14,7 @@ function fetchQuestionAnswer() {
     .then((data) => {
       // Reset usedAnswers if all words have been used
       if (usedAnswers.size === data.length) {
-        console.log("All words used. Resetting usedAnswers set.");
+        // console.log("All words used. Resetting usedAnswers set.");
         usedAnswers.clear();
       }
 
@@ -30,7 +30,7 @@ function fetchQuestionAnswer() {
       secretWordDisplay.textContent = "_ ".repeat(currentAnswer.length).trim();
 
       console.log(`The secret word is: ${currentAnswer}`);
-      console.log("Used answers set:", [...usedAnswers]);
+      // console.log("Used answers set:", [...usedAnswers]);
     })
     .catch((error) =>
       console.error("Error loading question-answer pairs:", error)
@@ -62,13 +62,13 @@ function updateSecretWordDisplay() {
 function handleGuess(letter, button) {
   // Prevent input if the game has ended
   if (isGameWon() || isGameLost()) {
-    console.log("Game has already ended, ignoring input.");
+    // console.log("Game has already ended, ignoring input.");
     return;
   }
 
   // Prevent input during a fetch operation
   if (isFetching) {
-    console.log("Fetching in progress, ignoring input.");
+    // console.log("Fetching in progress, ignoring input.");
     return;
   }
 
