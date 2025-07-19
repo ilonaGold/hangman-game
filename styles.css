@@ -48,11 +48,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.4)
-  ),
-  url("assets/images/rope-bg.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("assets/images/rope-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   z-index: -1;
 }
@@ -299,5 +296,44 @@ h1 {
   #secret-word {
     font-size: 2rem;
     letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-height: 800px) {
+  #hangman-container {
+    padding: 0.5rem 0.5rem 1.5rem;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #gallows-canvas {
+    margin: 0.5rem auto;
+    max-width: 180px;
+    max-height: 180px;
+  }
+  #quiz-section {
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  #secret-word {
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.5rem;
+  }
+  #virtual-keyboard {
+    gap: 2px;
+    width: 100%;
+  }
+  .key {
+    font-size: 1rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .modal-content {
+    padding: 1.5rem 0.5rem 1.5rem;
+    font-size: 1rem;
+    gap: 1rem;
   }
 }
